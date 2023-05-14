@@ -24,7 +24,7 @@ const Card = (props) => {
       <img src={`/${img}`} className="card-img" />
       {/* </div> */}
       <div className="card-stats">
-        <img src="../images/star.png" />
+        <img src="/star.png" />
         <span>{rating}</span>
         <span className="card-fadded-text">({reviewCount}) • </span>
         <span className="card-fadded-text">{location}</span>
