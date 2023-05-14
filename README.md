@@ -1,3 +1,3 @@
-# React Info Site
+# Airbnb Experiences Site
 
-[Project Link](https://thalha-react-info-site.netlify.app/) 
+[Project Link](https://thalha-airbnb-experiences.netlify.app/) 
