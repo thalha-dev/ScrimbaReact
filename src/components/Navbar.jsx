@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav>
-      <img src="../../images/airbnb-logo.png" alt="logo" />
+      <img src="/airbnb-logo.png" alt="logo" />
     </nav>
   );
 };
