@@ -1,7 +1,9 @@
 :root {
-  --background-color: #0f0f0f;
-  --text-color: #59bfd3;
-  --text-white: #dfdee1;
+  --accent-color: #59bfd3;
+  --background-color: #ecedff;
+  --text-color: #0f0f0f;
+  --background-color-dark: #0f0f0f;
+  --text-color-dark: #ecedff;
 }
 
 * {
@@ -9,9 +11,29 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--background-color);
-  color: var(--text-white);
   line-height: 2rem;
+}
+
+.cover {
+  background: var(--background-color);
+}
+
+#dark.cover {
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 2em;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+#dark .container {
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 h1,
@@ -23,40 +45,37 @@ p {
 .container header {
   display: flex;
   justify-content: space-between;
-  background: var(--text-color);
-  color: var(--background-color);
+  background: var(--accent-color);
+  color: var(--text-color);
   padding: 2em;
 }
 
 .container footer {
-  background: var(--text-color);
-  color: var(--background-color);
+  background: var(--accent-color);
+  color: var(--text-color);
   margin-top: 2em;
   padding: 2em;
 }
 
 .container nav {
   align-self: flex-end;
+  width: 20%;
 }
 .container nav ul {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin-left: 1em;
+  /* padding-left: 1em; */
 }
 
 nav ul a {
   text-decoration: none;
-  color: var(--background-color);
-}
-
-.container {
-  width: 70%;
-  margin: 0 auto;
-  padding: 0 2em;
+  color: var(--text-color);
 }
 
 .container h2 {
@@ -68,4 +87,44 @@ nav ul a {
 }
 .main-content li::marker {
   font-size: 30px;
+}
+
+.toggle-button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 30%; */
+}
+
+.toggle-label {
+  background: #fff;
+  width: 3.2rem;
+  height: 1.8rem;
+  border-radius: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+.toggle-label::before {
+  position: absolute;
+  content: "";
+  background: #000;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 200px;
+  margin-top: 1.4px;
+  transition: 0.2s;
+}
+.toggle-button:checked + .toggle-label {
+  background: #000;
+}
+
+.toggle-button:checked + .toggle-label::before {
+  transform: translateX(1.5rem);
+  background: #fff;
+}
+
+.toggle-button {
+  display: none;
 }
