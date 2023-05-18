@@ -1,9 +1,12 @@
 import "./App.css";
+import Header from "./components/Header";
+import Meme from "./components/Meme";
 
 const App = () => {
   return (
     <div>
-      <h2>MEME</h2>
+      <Header />
+      <Meme />
     </div>
   );
 };
